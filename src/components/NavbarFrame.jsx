@@ -1,15 +1,17 @@
-export default function NavbarFrame() {
+  import { Link } from "react-router-dom";
+
+  export default function NavbarFrame() {
     return (
       <header className="navbar">
-        <a className="navbar-logo" href="/">
+        <Link className="navbar-logo" to="/">
           Realworld Blog
-        </a>
+        </Link>
   
         <nav className="navbar-links">
-          <a href="/">Home</a>
-          <a href="/signin">Sign In</a>
-          <a href="/signup">Sign Up</a>
+          <Link to="/">Home</Link>
+          <Link to="/signin">Sign In</Link>
+          <Link to="/signup">Sign Up</Link>
         </nav>
       </header>
     );
-  }
+  }  
