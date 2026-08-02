@@ -30,12 +30,14 @@ export default function Post({
       </Link>
 
       <p className="post-description">{description}</p>
-
+      
       <div className="post-tags">
-        {tags.map((tag, index) => (
-          <Tag key={`${tag}-${index}`}>{tag}</Tag>
-        ))}
-      </div>
+        {tags?.filter((tag) => tag?.trim()).map((tag, index) => (
+      <Tag 
+        key={`${slug}-${tag}-${index}`}> {tag}
+      </Tag>
+    ))}
+</div>
     </article>
   );
 }
