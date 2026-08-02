@@ -25,15 +25,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(100% - 32px, 900px);
+  width: 100%;
   min-height: 64px;
-  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .navbar-logo {
   color: #5cb85c;
   font-size: 20px;
   font-weight: 700;
+  margin-left: 200px;
 }
 
 .navbar-links {
@@ -41,6 +42,7 @@ a {
   gap: 20px;
   color: #777777;
   font-size: 14px;
+  margin-right: 200px;
 }
 
 .navbar-links a:hover {
@@ -70,12 +72,16 @@ a {
 /* Main layout */
 
 .main-content {
-  width: min(100% - 32px, 900px);
-  margin: 24px auto 60px;
+  width: 100%;
+  margin: 24px 0 60px;
+  padding: 0 32px;
 }
 
 .post-list {
   min-width: 0;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-bottom: 20px;
 }
 
 /* Sidebar */
@@ -86,6 +92,8 @@ a {
   border: 1px solid #d8d8d8;
   border-radius: 8px;
   background-color: #fafafa;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .sidebar h2 {
@@ -296,4 +304,80 @@ a {
   text-align: center;
   font-size: 18px;
   color: #333333;
+}
+
+
+/* Article page */
+
+.article-banner {
+  width: 100%;
+  padding: 56px 20px;
+  background-color: #303030;
+  color: #ffffff;
+}
+
+.article-banner-content {
+  width: min(100% - 32px, 900px);
+  margin: 0 auto;
+}
+
+.article-banner h1 {
+  max-width: 760px;
+  margin: 0 0 20px;
+  font-size: 42px;
+  line-height: 1;
+  text-align: left;
+}
+
+.user-info-dark .user-name {
+  color: #5cb85c;
+}
+
+.user-info-dark .post-date {
+  color: #bdbdbd;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar-fallback {
+  object-fit: contain;
+}
+
+.user-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  color: #5cb85c;
+}
+
+.article-page-content {
+  width: min(100% - 32px, 760px);
+  margin: 36px auto 80px;
+}
+
+.article-body {
+  margin: 0 0 24px;
+  color: #444444;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 44px;
+}
+
+.article-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 }

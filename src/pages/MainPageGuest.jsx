@@ -65,11 +65,15 @@ export default function MainPageGuest() {
             !error &&
             posts.map((post) => (
               <Post
-                key={post.slug}
-                title={post.title}
-                description={post.description}
-                likes={post.favoritesCount}
-                tags={post.tagList}
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              description={post.description}
+              likes={post.favoritesCount}
+              tags={post.tagList}
+              username={post.author.username}
+              date={post.createdAt}
+              image={post.author.image}
               />
             ))}
 

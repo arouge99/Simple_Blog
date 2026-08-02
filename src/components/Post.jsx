@@ -1,17 +1,33 @@
+import { Link } from "react-router-dom";
 import Button from "./Button";
 import Tag from "./Tag";
 import UserInfo from "./UserInfo";
 
-export default function Post({ title, description, likes, tags }) {
+export default function Post({
+  slug,
+  title,
+  description,
+  likes,
+  tags,
+  username,
+  date,
+  image,
+}) {
   return (
     <article className="post">
       <div className="post-header">
-        <UserInfo />
+        <UserInfo 
+        username={username}
+        date={date}
+        image={image}
+        />
 
         <Button disabled>{likes}</Button>
       </div>
 
-      <h2 className="post-title">{title}</h2>
+      <Link to={`/articles/${slug}`}>
+        <h2 className="post-title">{title}</h2>
+      </Link>
 
       <p className="post-description">{description}</p>
 
